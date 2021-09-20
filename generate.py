@@ -25,9 +25,7 @@ class BrainWallet:
         for passphrase in self.passphrases:
             partial_private_key = hashlib.sha256(passphrase.encode('utf-8')).hexdigest()
             partial_private_keys.append(partial_private_key)
-        private_key = partial_private_keys[0][0:16] + partial_private_keys[1][16:32] + partial_private_keys[2][32:48] + partial_private_keys[3][48:64]
-        private_key = codecs.encode(codecs.decode(private_key, 'hex'), 'hex')
-        return private_key
+
         private_key = str()
         if rule == 1:
             part_num = len(partial_private_keys)
