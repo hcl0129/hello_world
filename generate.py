@@ -125,4 +125,6 @@ if passphrases:
     wallet.generate(passphrases)
     print(f'Passphrase: {passphrases}')
     print(f'PrivateKey: {wallet.private}')
-    print(f'PublicKey:  {wallet.address}')
+    print(f'Address: {wallet.address}')
+
+exit()
